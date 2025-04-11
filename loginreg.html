@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style1.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form id="signupForm" action="signup.php" method="POST">
+          <h1>Create Account</h1>
+          <span>or use your email for registration</span>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form action="login.php" method="POST">
+          <h1>Sign In</h1>
+          <span>or use your email password</span>
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <a href="#">Forgot Your Password?</a>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all site features</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Welcome, Friend!</h1>
+            <p>Enter your personal details to use all site features</p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+      const registerBtn = document.getElementById("register");
+      const loginBtn = document.getElementById("login");
+
+      registerBtn.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      loginBtn.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          const name = this.name.value.trim();
+          const email = this.email.value.trim();
+          const password = this.password.value;
+
+          const nameRegex = /^[A-Za-z\s]+$/;
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+          if (!nameRegex.test(name)) {
+            alert("Name should only contain Numbers and spaces.");
+            e.preventDefault();
+            return false;
+          }
+
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            e.preventDefault();
+            return false;
+          }
+
+          if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            e.preventDefault();
+            return false;
+          }
+
+          return true; // Submit if all checks pass
+        });
+    </script>
+  </body>
+</html>

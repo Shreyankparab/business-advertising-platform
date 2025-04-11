@@ -1,0 +1,1366 @@
+:root {
+  scroll-behavior: smooth;
+
+  /* Font Variables */
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* Color Variables */
+  --contrast-color: #ffffff;
+  --primary-purple: #023047;
+  --accent-orange: #ffb703;
+}
+
+body {
+  font-family: var(--default-font);
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: var(--heading-font);
+}
+
+.navbar {
+  font-family: var(--nav-font);
+}
+
+:root {
+  --nav-color: #444444; /* The default color of the main navmenu links */
+  --nav-hover-color: #023047; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #023047; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+.container-section {
+  background-image: url("../img/hero-BCH.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  /* overflow-y: scroll; */
+  scroll-snap-type: y mandatory;
+}
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.navbar {
+  max-width: 95%;
+  margin: auto;
+  top: 0;
+  background-color: transparent;
+  padding: 1.5rem 2rem;
+}
+/* .navbar-nav{
+    left: 100px;
+    } */
+.navbar-nav .nav-item {
+  margin-left: 30px;
+  background-color: transparent;
+}
+.nav-item:hover {
+  background-color: var(--nav-hover-color);
+  border-radius: 12px;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--contrast-color) !important;
+}
+
+.navbar-brand {
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--primary-purple);
+  font-weight: 500;
+  margin: 0 1rem;
+}
+/* General image styling to prevent overflow */
+img {
+  max-width: 100%; /* Ensures image does not exceed container width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra space below inline images */
+}
+
+/* Specific for business images */
+.business-img img {
+  width: 100%; /* Makes it responsive within its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures it fills the container without stretching */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* If images are inside a fixed-size container */
+.business-img {
+  max-width: 100%;
+  overflow: hidden; /* Prevents any overflow */
+}
+
+/* Prevent images from exceeding their parent's height */
+img.responsive {
+  max-height: 400px; /* Set max height to prevent extreme stretching */
+  width: auto; /* Keeps the aspect ratio */
+}
+
+.dropdown-menu {
+  background-color: #023047 !important; /* Dark blue background */
+  border: none;
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  color: white; /* Text color */
+}
+
+/* Change color on hover */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #035377; /* Slightly lighter blue on hover */
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--primary-purple);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  border-color: #8ecae6;
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(142, 202, 230, 1) 10.8%,
+    rgba(33, 158, 188, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-arrow {
+  color: var(--primary-purple);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar-separator {
+  width: 90%;
+  height: 1.8px;
+  background-color: var(--primary-purple); /* Adjust color as needed */
+  margin: 0 auto; /* Centers the line */
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  z-index: 1000;
+  bottom: 0;
+}
+
+.hero-content {
+  top: 150px;
+  left: 90px;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: bolder;
+  font-family: "Poppins Black", sans-serif !important;
+  color: var(--primary-purple);
+  margin-bottom: 20px;
+}
+
+/* Hero Description */
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.hero .btn-get-started {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #bc9587;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.lead {
+  margin-left: 120px;
+  color: var(--primary-purple);
+  font-weight: 400;
+}
+.button-get-started {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--primary-purple);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 450px;
+}
+.button-get-started:hover::before {
+  transform: scaleX(1);
+  border-color: #8ecae6;
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button-get-started::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(142, 202, 230, 1) 10.8%,
+    rgba(33, 158, 188, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.hero .btn-get-started:hover {
+  background-color: #ff6347;
+  transform: scale(1.05);
+}
+/* =============================== */
+.display-business {
+  width: 100%;
+  height: 100vh;
+  margin-left: 0px;
+  background-color: var(--primary-purple);
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding is inside the width/height */
+  overflow: hidden; /* Prevents any child elements from overflowing */
+}
+
+.container {
+  width: 100%; /* Ensures it fills the parent width */
+  max-height: 100%; /* Prevents the container from exceeding the parent's height */
+  height: 600px; /* Adjust this value as needed */
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is inside the height and width */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.business {
+  width: 100%;
+  height: 30%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 100px;
+  padding: 5px;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.business.show:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.business.show:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.business.show:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.business.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.business-text {
+  width: 70%;
+  height: 100%;
+  color: #ffffff;
+  margin-left: 60px;
+  margin-top: 5px;
+}
+.business-img {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.business-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.business-1 {
+  width: 90%;
+  margin-left: 120px;
+}
+
+/* Second business div */
+.business-2 {
+  width: 90%;
+}
+
+/* Third business div */
+.business-3 {
+  width: 90%;
+  margin-left: 120px;
+}
+
+/* =============================== */
+.demo-class1 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-color: #023047;
+  scroll-snap-align: start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.glass-div {
+  width: 600px;
+  height: 520px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 100px;
+  margin-left: 50px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass-div ul li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.top-business-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.business-rank-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 18px 24px;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.business-rank-card:hover {
+  transform: translateY(-3px);
+}
+
+.rank-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  width: 40px;
+  text-align: center;
+}
+.rank-icon {
+  font-size: 24px;
+  color: gold;
+  width: 40px;
+  text-align: center;
+}
+
+.business-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.glass-div h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  font-family: "Poppins Black", sans-serif !important;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 8%;
+  left: 75px;
+  transform: translateY(-50%) rotate(90deg);
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+  white-space: nowrap;
+}
+.glass-div::after {
+  content: " ";
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: calc(30px + 4rem); /* Align next to h1 */
+  width: 2px;
+  height: 90%; /* Adjust height as needed */
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.demo-img-div {
+  margin-left: 50px;
+  width: 40%;
+  height: 500px;
+  border-radius: 20px;
+  margin-top: 80px;
+  color: white;
+}
+
+.display-img-box {
+  width: 100%;
+  height: 200px;
+}
+
+.dib1,
+.dib2 {
+  height: 50%;
+  gap: 20px;
+  flex-direction: row;
+  display: flex;
+  margin-top: 20px;
+}
+
+.display {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+}
+
+.d1 {
+  border-radius: 80px 80px 0px 80px;
+  background-image: url("../img/team-1.jpg");
+}
+
+.d2 {
+  border-radius: 80px 80px 80px 0px;
+  background-image: url("../img/team-2.jpg");
+}
+
+.d3 {
+  border-radius: 80px 0px 80px 80px;
+  background-image: url("../img/team-3.jpg");
+}
+
+.d4 {
+  border-radius: 0px 80px 80px 80px;
+  background-image: url("../img/team-4.jpg");
+}
+
+.demo-class2 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: var(--contrast-color);
+  scroll-snap-align: start;
+}
+.demo-class2 h2 {
+  padding-top: 40px;
+}
+.custom-ad-card {
+  border-radius: 1.5rem !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 480px; /* ⬅️ More height for content balance */
+}
+
+.custom-ad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-ad-card img {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  object-fit: cover;
+  height: 300px;
+}
+
+.custom-btn {
+  background-color: #023047;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #03557a; /* Slightly lighter shade on hover */
+  color: #fff;
+}
+
+:root {
+  scroll-behavior: smooth;
+
+  /* Font Variables */
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* Color Variables */
+  --contrast-color: #ffffff;
+  --primary-purple: #023047;
+  --accent-orange: #ffb703;
+}
+
+body {
+  font-family: var(--default-font);
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: var(--heading-font);
+}
+
+.navbar {
+  font-family: var(--nav-font);
+}
+
+:root {
+  --nav-color: #444444; /* The default color of the main navmenu links */
+  --nav-hover-color: #023047; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #023047; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+.container-section {
+  background-image: url("../img/hero-BCH.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  /* overflow-y: scroll; */
+  scroll-snap-type: y mandatory;
+}
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.navbar {
+  max-width: 95%;
+  margin: auto;
+  top: 0;
+  background-color: transparent;
+  padding: 1.5rem 2rem;
+}
+/* .navbar-nav{
+    left: 100px;
+    } */
+.navbar-nav .nav-item {
+  margin-left: 30px;
+  background-color: transparent;
+}
+.nav-item:hover {
+  background-color: var(--nav-hover-color);
+  border-radius: 12px;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--contrast-color) !important;
+}
+
+.navbar-brand {
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--primary-purple);
+  font-weight: 500;
+  margin: 0 1rem;
+}
+/* General image styling to prevent overflow */
+img {
+  max-width: 100%; /* Ensures image does not exceed container width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra space below inline images */
+}
+
+/* Specific for business images */
+.business-img img {
+  width: 100%; /* Makes it responsive within its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures it fills the container without stretching */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* If images are inside a fixed-size container */
+.business-img {
+  max-width: 100%;
+  overflow: hidden; /* Prevents any overflow */
+}
+
+/* Prevent images from exceeding their parent's height */
+img.responsive {
+  max-height: 400px; /* Set max height to prevent extreme stretching */
+  width: auto; /* Keeps the aspect ratio */
+}
+
+.dropdown-menu {
+  background-color: #023047 !important; /* Dark blue background */
+  border: none;
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  color: white; /* Text color */
+}
+
+/* Change color on hover */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #035377; /* Slightly lighter blue on hover */
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--primary-purple);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  border-color: #8ecae6;
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(142, 202, 230, 1) 10.8%,
+    rgba(33, 158, 188, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-arrow {
+  color: var(--primary-purple);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar-separator {
+  width: 90%;
+  height: 1.8px;
+  background-color: var(--primary-purple); /* Adjust color as needed */
+  margin: 0 auto; /* Centers the line */
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  z-index: 1000;
+  bottom: 0;
+}
+
+.hero-content {
+  top: 150px;
+  left: 90px;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: bolder;
+  font-family: "Poppins Black", sans-serif !important;
+  color: var(--primary-purple);
+  margin-bottom: 20px;
+}
+
+/* Hero Description */
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.hero .btn-get-started {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #bc9587;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.lead {
+  margin-left: 120px;
+  color: var(--primary-purple);
+  font-weight: 400;
+}
+.button-get-started {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: var(--primary-purple);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 450px;
+}
+.button-get-started:hover::before {
+  transform: scaleX(1);
+  border-color: #8ecae6;
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button-get-started::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(142, 202, 230, 1) 10.8%,
+    rgba(33, 158, 188, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.hero .btn-get-started:hover {
+  background-color: #ff6347;
+  transform: scale(1.05);
+}
+/* =============================== */
+.display-business {
+  width: 100%;
+  height: 100vh;
+  margin-left: 0px;
+  background-color: var(--primary-purple);
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding is inside the width/height */
+  overflow: hidden; /* Prevents any child elements from overflowing */
+}
+
+.container {
+  width: 100%; /* Ensures it fills the parent width */
+  max-height: 100%; /* Prevents the container from exceeding the parent's height */
+  height: 600px; /* Adjust this value as needed */
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is inside the height and width */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.business {
+  width: 100%;
+  height: 30%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 100px;
+  padding: 5px;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.business.show:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.business.show:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.business.show:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.business.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.business-text {
+  width: 70%;
+  height: 100%;
+  color: #ffffff;
+  margin-left: 60px;
+  margin-top: 5px;
+}
+.business-img {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.business-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.business-1 {
+  width: 90%;
+  margin-left: 120px;
+}
+
+/* Second business div */
+.business-2 {
+  width: 90%;
+}
+
+/* Third business div */
+.business-3 {
+  width: 90%;
+  margin-left: 120px;
+}
+
+/* =============================== */
+.demo-class1 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-color: #023047;
+  scroll-snap-align: start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.glass-div {
+  width: 600px;
+  height: 520px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 100px;
+  margin-left: 50px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass-div ul li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.top-business-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.business-rank-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 18px 24px;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.business-rank-card:hover {
+  transform: translateY(-3px);
+}
+
+.rank-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  width: 40px;
+  text-align: center;
+}
+.rank-icon {
+  font-size: 24px;
+  color: gold;
+  width: 40px;
+  text-align: center;
+}
+
+.business-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.glass-div h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  font-family: "Poppins Black", sans-serif !important;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 8%;
+  left: 75px;
+  transform: translateY(-50%) rotate(90deg);
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+  white-space: nowrap;
+}
+.glass-div::after {
+  content: " ";
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: calc(30px + 4rem); /* Align next to h1 */
+  width: 2px;
+  height: 90%; /* Adjust height as needed */
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+.demo-img-div {
+  margin-left: 50px;
+  width: 40%;
+  height: 500px;
+  border-radius: 20px;
+  margin-top: 80px;
+  color: white;
+}
+
+.display-img-box {
+  width: 100%;
+  height: 200px;
+}
+
+.dib1,
+.dib2 {
+  height: 50%;
+  gap: 20px;
+  flex-direction: row;
+  display: flex;
+  margin-top: 20px;
+}
+
+.display {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+}
+
+.d1 {
+  border-radius: 80px 80px 0px 80px;
+  background-image: url("../img/team-1.jpg");
+}
+
+.d2 {
+  border-radius: 80px 80px 80px 0px;
+  background-image: url("../img/team-2.jpg");
+}
+
+.d3 {
+  border-radius: 80px 0px 80px 80px;
+  background-image: url("../img/team-3.jpg");
+}
+
+.d4 {
+  border-radius: 0px 80px 80px 80px;
+  background-image: url("../img/team-4.jpg");
+}
+
+.demo-class2 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: var(--contrast-color);
+  scroll-snap-align: start;
+}
+.demo-class2 h2 {
+  padding-top: 40px;
+}
+.custom-ad-card {
+  border-radius: 1.5rem !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 480px; /* ⬅️ More height for content balance */
+}
+
+.custom-ad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-ad-card img {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  object-fit: cover;
+  height: 300px;
+}
+
+.custom-btn {
+  background-color: #023047;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #03557a; /* Slightly lighter shade on hover */
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .d-lg-none .button {
+    display: none !important;
+  }
+  .button {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    left: 0px;
+  }
+  .container-section {
+    width: 100%;
+    height: 620px;
+  }
+  .display-business {
+    margin-left: 0px;
+  }
+  .container {
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  .navbar-separator {
+    width: 92%;
+    height: 1.8px;
+    background-color: var(--primary-purple);
+    margin: 0 auto;
+    position: fixed;
+    top: 75px;
+    left: 25px;
+    z-index: 1000;
+    bottom: 0;
+  }
+
+  .lead {
+    margin-left: 0px;
+  }
+  .button-get-started {
+    margin-left: 300px;
+  }
+  .container {
+    margin-top: 10px;
+  }
+  .business-1 {
+    margin-left: 20px;
+    width: 90%;
+    /* top: -20px; */
+  }
+
+  /* Second business div */
+  .business-2 {
+    width: 90%;
+  }
+
+  /* Third business div */
+  .business-3 {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .demo-class2 {
+    padding-top: 100px; /* extra space for mobile nav if it stacks */
+  }
+}
+@media (max-width: 430px) {
+  .container-section {
+    width: 500px;
+    height: 720px;
+  }
+  .hero-content {
+    left: 0;
+  }
+  .button-get-started {
+    margin-left: 100px;
+  }
+  .display-business {
+    width: 500px;
+  }
+  .demo-class1 {
+    width: 500px;
+  }
+  .demo-class2 {
+    width: 500px;
+  }
+
+  .glass-div {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-section {
+    width: 500px;
+    height: 850px;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }
+
+  .button.d-lg-block {
+    display: none !important;
+  }
+
+  .navbar-nav .nav-item .button {
+    display: block !important;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  .navbar-separator {
+    height: 2px;
+    background-color: var(--primary-purple);
+    transition: opacity 0.3s ease;
+  }
+  .hero-content {
+    left: 0;
+  }
+  .button-get-started {
+    margin-left: 100px;
+  }
+  .display-business {
+    width: 500px;
+  }
+  .demo-class1 {
+    width: 500px;
+  }
+  .demo-class2 {
+    width: 500px;
+  }
+
+  .glass-div {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media (max-width: 375px) {
+  .container-section {
+    width: 500px;
+    height: 960px;
+  }
+  .hero-content {
+    left: 0;
+  }
+  .button-get-started {
+    margin-left: 100px;
+  }
+  .display-business {
+    width: 500px;
+  }
+  .demo-class1 {
+    width: 500px;
+  }
+  .demo-class2 {
+    width: 500px;
+  }
+  .glass-div {
+    width: 400px;
+    height: 200px;
+  }
+}

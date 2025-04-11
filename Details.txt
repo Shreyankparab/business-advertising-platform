@@ -1,0 +1,165 @@
+Website Structure & Page Breakdown
+1. Home Page (Landing Page)
+Purpose: Introduce the platform and highlight key benefits.
+
+Sections:
+Hero Section:
+
+A catchy tagline (e.g., “Empowering Local Businesses, Connecting Customers”).
+Background image of a thriving business community.
+Call-to-action (CTA) buttons: "List Your Business" & "Explore Businesses."
+Search & Filter Bar:
+
+Search businesses by name, category, or location.
+Filters for ratings, operating hours, and services.
+Popular Categories:
+
+Icons/cards for categories (Restaurants, Salons, Retail, Services, etc.).
+Clicking a category redirects to its listing page.
+How It Works:
+
+Three-step process: Register → Create Profile → Get Customers.
+Visual representation (icons or a small animation).
+Featured Businesses:
+
+Slider showcasing top-rated businesses with their logo, name, and ratings.
+Testimonials & Success Stories:
+
+Real or placeholder reviews from businesses/customers.
+CTA Section (Footer Area):
+
+“Join Now” button leading to business registration.
+2. Business Directory Page
+Purpose: Displays all registered businesses with search & filters.
+
+Sections:
+Search & Filter Panel (Left Sidebar)
+
+Category dropdown.
+Location-based filter (Google Maps API).
+Price range filter (if applicable).
+Open now (toggle switch).
+Business Listing Grid (Main Section)
+
+Cards showing:
+Business Name & Logo.
+Short description.
+Ratings & Review count.
+"View Details" button.
+Pagination (Bottom)
+
+Load more businesses or page numbers.
+3. Business Profile Page (Individual Business Page)
+Purpose: Displays complete details of a business.
+
+Sections:
+Business Header:
+
+Cover image & business logo.
+Name, category, and rating.
+Contact info (Phone, Email, Website, Social Media).
+Map with location pin.
+Description & Services:
+
+About the business.
+List of services/products offered.
+Operating Hours:
+
+Weekly schedule in a table format.
+Gallery (Images & Videos):
+
+Carousel for photos/videos.
+Customer Reviews & Ratings:
+
+User-submitted reviews.
+Review form with name, rating, and comment.
+CTA Buttons:
+
+Call Now, Get Directions, Save to Favorites.
+4. Registration & Login Page (For Businesses & Users)
+Purpose: Allow businesses and customers to create accounts.
+
+Forms:
+Business Registration:
+
+Business Name, Category, Email, Phone, Password.
+Logo & Cover Image upload.
+Business Description.
+Operating Hours.
+Location selection (Google Maps API).
+User Registration (Customers):
+
+Name, Email, Password, Profile Picture.
+Login Page:
+
+Email & Password with “Forgot Password?” option.
+5. Dashboard (For Businesses)
+Purpose: Manage business profile, promotions, and analytics.
+
+Sections:
+Profile Overview:
+
+Quick view of business details.
+Edit Profile button.
+Analytics Panel:
+
+Number of visitors.
+Clicks on "Call Now," "Get Directions," and "Website."
+Engagement on posts/offers.
+Manage Promotions:
+
+Create special discounts/offers.
+Schedule promotions.
+Customer Reviews Management:
+
+View & respond to customer reviews.
+6. User Dashboard (For Customers)
+Purpose: Manage saved businesses, reviews, and preferences.
+
+Sections:
+Saved Businesses:
+
+List of favorited businesses.
+My Reviews:
+
+View, edit, or delete posted reviews.
+Account Settings:
+
+Change password, email, profile picture.
+7. Advertising & Promotions Page
+Purpose: Allows businesses to boost their visibility.
+
+Features:
+Ad Plans:
+
+Free listing vs. Paid Ads.
+Comparison table of benefits.
+Create an Ad Campaign:
+
+Select ad placement (Homepage, Search Results, etc.).
+Upload promotional banner.
+Set campaign duration.
+Payment Integration (Future Enhancement):
+
+Plans for Stripe/PayPal for premium ads.
+8. Contact Us Page
+Purpose: Provide support for businesses/customers.
+
+Sections:
+Contact Form:
+
+Name, Email, Subject, Message.
+FAQ Section:
+
+Common questions about using the platform.
+Customer Support Info:
+
+Email & Phone support details.
+Additional Small Features
+✅ Sticky Navigation Bar – Quick access to categories & search.
+✅ Dark Mode Toggle – Modern UI experience.
+✅ Live Chat Support (Future Feature) – Chatbot or admin chat.
+✅ Google & Facebook Login – Easy sign-up for users.
+✅ Badges for Verified Businesses – "Verified" tag for authentic businesses.
+✅ QR Code Generator – Businesses get a scannable QR code for their profile.
+✅ Newsletter Signup Popup – Collect customer emails for updates.
