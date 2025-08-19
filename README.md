@@ -17,7 +17,7 @@ The goal is to provide an affordable platform for businesses that cannot afford 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** PHP  
 - **Database:** MySQL  
-- **Server:** Apache / XAMPP / WAMP  
+- **Server:**  XAMPP 
 
 ---
 
